@@ -4,7 +4,9 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Greeting
-        run: echo "Hello World"
-      - name: Goodbye Greeting
-        run: echo "Good Bye"
+      - name: Get the code
+        uses: actions/checkout@v4
+      - name: Install Nodejs
+        uses: actions/setup-node@v4.0.3
+        with:
+          node-version: 18
